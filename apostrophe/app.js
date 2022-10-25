@@ -11,6 +11,8 @@ require('apostrophe')({
     // have a minimal configuration here to turn them on: `moduleName: {}`
     // ***********************************************************************
     // `className` options set custom CSS classes for Apostrophe core widgets.
+    '@apostrophecms/express': {},
+
     '@apostrophecms/rich-text-widget': {
       options: {
         className: 'bp-rich-text'
@@ -45,6 +47,7 @@ require('apostrophe')({
 
     people: {
       extend: '@apostrophecms/piece-type',
+      restApi: true,
       options: {
         restApi: true,
         export: true,
