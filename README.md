@@ -1,5 +1,7 @@
 # kramkalas
 
+Examensarbete WU21
+
 ## Build Setup
 
 ```bash
