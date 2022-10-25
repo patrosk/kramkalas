@@ -1,0 +1,8 @@
+{% extends "layout.html" %} {% block main %}
+<section class="bp-content">
+  <h1>{{ data.page.h1 }}</h1>
+  <div>{% area data.page, 'hero_description' %}</div>
+  <div>{% area data.page, 'hero_contact_text' %}</div>
+  <div>{{ data.page.hero_contact_email }}</div>
+</section>
+{% endblock %}
