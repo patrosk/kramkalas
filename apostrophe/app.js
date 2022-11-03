@@ -28,6 +28,7 @@ require('apostrophe')({
         className: 'bp-video-widget'
       }
     },
+
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.
@@ -39,20 +40,25 @@ require('apostrophe')({
       }
     },
     'contact-page': {},
-
     // apostrophe headless to connect apostrophe to nuxt
-    'apostrophe-headless': {},
-
     'apostrophe-pieces-export': {},
+    // 'apostrophe-headless': {},
 
     people: {
       extend: '@apostrophecms/piece-type',
-      restApi: true,
       options: {
         restApi: true,
         export: true,
         label: 'Person',
-        pluralLabel: 'People'
+        pluralLabel: 'People',
+        publicApiProjection: {
+          title: 1,
+          slug: 1,
+          _url: 1,
+          _author: 1,
+          main: 1,
+          thumbnail: 1
+        }
       }
     }
 

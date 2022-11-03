@@ -15,9 +15,11 @@
 export default {
   async asyncData({ $axios }) {
     let mountains = [];
-    const { result } = await $axios.$get("/api/v1/people/");
-    console.log(result);
-    mountains = result;
+    const { results } = await $axios.$get(
+      "http://localhost:3000/api/v1/people/"
+    );
+    console.log(results);
+    mountains = results;
     return { mountains };
   },
 };
